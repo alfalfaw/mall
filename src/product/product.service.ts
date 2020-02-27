@@ -4,7 +4,7 @@ import { TypeOrmCrudService } from '@nestjsx/crud-typeorm';
 import { Product } from './product';
 
 @Injectable()
-export class ProductsService
+export class ProductService
  extends TypeOrmCrudService<Product> {
   constructor(@InjectRepository(Product) repo) {
     super(repo);

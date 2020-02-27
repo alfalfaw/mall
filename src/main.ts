@@ -7,16 +7,16 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const options = new DocumentBuilder()
-    .setTitle('Products')
-    .setDescription('Simple CRUD for managing products')
+    .setTitle('商城项目')
+    .setDescription('NestJs商城API')
     .setVersion('1.0')
-    .addTag('products')
+    .addTag('tmall')
     .build();
 
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('docs', app, document);
 
 
-  await app.listen(3002);
+  await app.listen(3000);
 }
 bootstrap();
